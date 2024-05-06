@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34728.123
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HPFizzBuzzer", "HPFizzBuzzer\HPFizzBuzzer.csproj", "{1B8D138E-D384-4812-8485-DA4D6A2E9D43}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HPFBTests", "HPFBTests\HPFBTests.csproj", "{172D7CE5-AFC2-42A3-BACF-A2091AA81DD1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1B8D138E-D384-4812-8485-DA4D6A2E9D43}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1B8D138E-D384-4812-8485-DA4D6A2E9D43}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1B8D138E-D384-4812-8485-DA4D6A2E9D43}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1B8D138E-D384-4812-8485-DA4D6A2E9D43}.Release|Any CPU.Build.0 = Release|Any CPU
+		{172D7CE5-AFC2-42A3-BACF-A2091AA81DD1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{172D7CE5-AFC2-42A3-BACF-A2091AA81DD1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{172D7CE5-AFC2-42A3-BACF-A2091AA81DD1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{172D7CE5-AFC2-42A3-BACF-A2091AA81DD1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8A1C936F-29FE-49C3-9B92-67E5DF08393C}
+	EndGlobalSection
+EndGlobal
