@@ -1,22 +1,21 @@
-﻿namespace HPFizzBuzzer
+﻿using System.Text;
+
+namespace HPFizzBuzzer
 {
-    internal class FizzBuzzer
+    public class FizzBuzzer
     {
         public string DetermineFizzBuzz(int number)
         {
-            if (number % 15 == 0)
+            StringBuilder resultString = new StringBuilder();
+
+            resultString.Append(Fizz.Check(number));
+            resultString.Append(Buzz.Check(number));
+
+            if (string.IsNullOrEmpty(resultString.ToString()))
             {
-                return "FizzBuzz";
+                return number.ToString();
             }
-            else if (number % 5 == 0)
-            {
-                return "Buzz";
-            }
-            else if (number % 3 == 0)
-            {
-                return "Fizz";
-            }
-            else return $"{number}";
+            return resultString.ToString();
         }
     }
 }
