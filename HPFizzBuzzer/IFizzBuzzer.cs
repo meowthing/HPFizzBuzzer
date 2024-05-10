@@ -1,7 +1,7 @@
 ﻿namespace HPFizzBuzzer
 {
-    internal interface IFizzBuzzer
+    public interface IFizzBuzzer
     {
-        public static string Check(int number) => "";
+        public string Check(int number) => "";
     }
 }

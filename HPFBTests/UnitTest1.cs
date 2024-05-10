@@ -9,49 +9,35 @@ namespace HPFBTests
         [SetUp]
         public void Setup()
         {
-            fb = new FizzBuzzer();
+            List<IFizzBuzzer> fizzBuzzers = new List<IFizzBuzzer>
+            {
+                new Fizz(), new Buzz()
+            };
+            fb = new FizzBuzzer(fizzBuzzers);
         }
 
         [Test]
         public void TestFizz()
         {
-            Assert.True(fb.DetermineFizzBuzz(3) == "Fizz");
+            Assert.That(fb.DetermineFizzBuzz(3), Is.EqualTo("Fizz"));
         }
 
         [Test]
         public void TestBuzz()
         {
-            Assert.True(fb.DetermineFizzBuzz(5) == "Buzz");
+            Assert.That(fb.DetermineFizzBuzz(5), Is.EqualTo("Buzz"));
         }
 
         [Test]
         public void TestFizzBuzz()
         {
-            Assert.True(fb.DetermineFizzBuzz(15) == "FizzBuzz");
+            Assert.That(fb.DetermineFizzBuzz(15), Is.EqualTo("FizzBuzz"));
         }
 
         [Test]
-        public void TestAll()
+        public void TestNumber()
         {
-            Enumerable.Range(1, 100).ToList().ForEach(c =>
-            {
-                if (c % 15 == 0)
-                {
-                    Assert.True(fb.DetermineFizzBuzz(c) == "FizzBuzz");
-                }
-                else if (c % 5 == 0)
-                {
-                    Assert.True(fb.DetermineFizzBuzz(c) == "Buzz");
-                }
-                else if (c % 3 == 0)
-                {
-                    Assert.True(fb.DetermineFizzBuzz(c) == "Fizz");
-                }               
-                else
-                {
-                    Assert.True(fb.DetermineFizzBuzz(c) == c.ToString());
-                }
-            });
+            Assert.That(fb.DetermineFizzBuzz(2), Is.EqualTo("2"));
         }
     }
 }

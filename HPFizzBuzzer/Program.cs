@@ -4,7 +4,11 @@
     {
         static void Main(string[] args)
         {
-            FizzBuzzer fb = new FizzBuzzer();
+            List<IFizzBuzzer> fizzBuzzers = new List<IFizzBuzzer>
+            {
+                new Fizz(), new Buzz(), new Fazz()
+            };
+            FizzBuzzer fb = new FizzBuzzer(fizzBuzzers);
             Enumerable.Range(1, 100).ToList().ForEach(c => Console.WriteLine(fb.DetermineFizzBuzz(c)));
 
         }

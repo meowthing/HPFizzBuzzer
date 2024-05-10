@@ -4,12 +4,18 @@ namespace HPFizzBuzzer
 {
     public class FizzBuzzer
     {
+        public List<IFizzBuzzer> fizzBuzzers = new List<IFizzBuzzer>();
+
+        public FizzBuzzer(List<IFizzBuzzer> fbs)
+        {
+            fizzBuzzers = fbs;
+        }
+        
         public string DetermineFizzBuzz(int number)
         {
             StringBuilder resultString = new StringBuilder();
 
-            resultString.Append(Fizz.Check(number));
-            resultString.Append(Buzz.Check(number));
+            fizzBuzzers.ForEach(fb => resultString.Append(fb.Check(number)));
 
             if (string.IsNullOrEmpty(resultString.ToString()))
             {

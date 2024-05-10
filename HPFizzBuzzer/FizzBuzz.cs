@@ -1,14 +1,8 @@
 ﻿namespace HPFizzBuzzer
-{
-    /**
-     * This is quite contrived for FizzBuzz but have separated 
-     * the checks as single purpose classes. The idea being
-     * you can interchange Fizz or Buzz to get
-     * a different calculation with the same input.
-     */    
+{ 
     public class Fizz : IFizzBuzzer
     {
-        public static string Check(int number)
+        public string Check(int number)
         {
             if (number % 3 == 0)
             {
@@ -21,11 +15,24 @@
 
     public class Buzz : IFizzBuzzer
     {
-        public static string Check(int number)
+        public string Check(int number)
         {
             if (number % 5 == 0)
             {
                 return "Buzz";
+            }
+            else
+                return "";
+        }
+    }
+
+    public class Fazz : IFizzBuzzer
+    {
+        public string Check(int number)
+        {
+            if (number % 7 == 0)
+            {
+                return "Fazz";
             }
             else
                 return "";
